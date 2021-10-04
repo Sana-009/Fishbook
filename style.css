@@ -1,27 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #f0f2f5;
   margin: 0;
   /* overflow-x: hidden ; */
 }
 .container {
-  padding-bottom: 45px;
-  width: 70%;
-  margin: 8.4% 15% 8.1% 15%;
+  min-height: 100vh;
+  width: 100%;
+  padding: 1vw 2vh;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  
   position: relative;
 }
 .left{
-    float: left;
-    width: 50%;
+  height: 100%;
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem;
 }
 .right {
-  width: 50%;
-  float: right;
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  padding: 1rem;
 }
-
 .logo {
   width: 301px;
   height: auto;
@@ -41,32 +55,28 @@ body {
   margin-top: -39px;
 }
 .my-form {
-  width: 65%;
-  margin: 0 15% 0 15%;
+  width: 100%;
+  max-width: 65ch;
   align-items: center;
-  border: none;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
   padding: 20px 20px;
   background-color: white;
-  box-shadow: antiquewhite;
-  padding-bottom: 25px;
 }
 .form-group input {
   width: 99%;
   height: 49px;
   border-radius: 6px;
   background: #ffff;
-  font-family: inherit;
+  font-family: Arial, Helvetica, sans-serif;
   border: 1px solid #dddfe2;
   color: #1d2129;
   vertical-align: middle;
+  padding: 6px 16px;
   margin-bottom: 10px;
 }
 .form-group ::placeholder {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  padding: 6px 16px;
   font-weight: normal;
 }
 .but1 {
@@ -140,18 +150,13 @@ a:hover {
   background-color: white;
   color: #737373;
   position: absolute;
-  /* bottom: 0; */
   width: auto;
-  /* height: 150px; */
-  /* display: none; */
-  /* margin: 10px; */
-  padding: 0.5% 16%;
-  /* padding-left: 10%; */
-  /* padding-right: 10%; */
+  height: auto;
+  padding: 1rem 2rem;
   font-size: 12px;
 }
 .main-footer a {
-    margin-bottom: 100%;
+  margin-bottom: 100%;
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
   color:#8a8d91;;
@@ -164,7 +169,6 @@ a:hover {
 }
 .main-footer li {
   display: inline;
-  /* margin: 12px; */
 }
 .copyright {
   color: #8a8d91;
@@ -181,18 +185,11 @@ a:hover {
   padding-right: 9px;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (min-width: 800px) {
   .container {
-    width: 100%;
-    display: flex;
-    position: relative;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
-    margin: 0;
+    flex-direction: row;
+  }
+  .left, .right {
+    width: 50%;
+  }
 }
-  .left, .right{
-    width:100%;    
-}
-
